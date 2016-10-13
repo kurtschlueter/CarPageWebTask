@@ -1,5 +1,6 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  // the react code will get injected here since we are finding the element with id = 'app'
+  #app
+  script(type='text/javascript' src="/build/bundle.js")
