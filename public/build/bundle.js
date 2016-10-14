@@ -21700,6 +21700,10 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
+	var _reactFontawesome = __webpack_require__(173);
+	
+	var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21722,20 +21726,129 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'col2' },
-	        _react2.default.createElement('img', { id: 'primary-display', src: "../images/car1.png" }),
+	        null,
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'primary-details' },
+	          { className: 'col2' },
+	          _react2.default.createElement('img', { id: 'primary-display', src: "../images/car1.png" }),
 	          _react2.default.createElement(
 	            'div',
-	            { id: 'primary-details-content' },
+	            { id: 'primary-details' },
 	            _react2.default.createElement(
-	              'h4',
-	              null,
-	              ' Ford Spectacular '
+	              'div',
+	              { id: 'primary-details-content' },
+	              _react2.default.createElement(
+	                'h1',
+	                null,
+	                ' Ford Spectacular '
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-label1' },
+	                ' Year '
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-figure1' },
+	                ' 3012 '
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-label1' },
+	                ' Price Range '
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-figure1' },
+	                ' $100,000 - $120,000 '
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-label1' },
+	                ' Mileage '
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-figure1' },
+	                ' 600,000 miles '
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-label1' },
+	                ' Item Number : AV8AS7 '
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-label1' },
+	                ' VIN : EV11JV10AV8AS7MI4 '
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { id: 'share-container' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'share-label1' },
+	                  ' Share this car '
+	                ),
+	                _react2.default.createElement(_reactFontawesome2.default, {
+	                  className: 'mail-icon',
+	                  name: 'envelope',
+	                  size: 'custom'
+	                })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { id: 'page-stats-container' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'page-stat' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'stat-label1' },
+	                    'Views'
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'stat-figure2' },
+	                    '123'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'page-stat' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'stat-label1' },
+	                    'Saves'
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'stat-figure2' },
+	                    '45'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'page-stat' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'stat-label1' },
+	                    'Shares'
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'stat-figure2' },
+	                    '49'
+	                  )
+	                )
+	              )
 	            )
 	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col3' },
+	          'sss'
 	        )
 	      );
 	    }

@@ -2,7 +2,7 @@ body {
   margin: auto;
   padding: 0;
   width: 1024px;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 #header {
@@ -59,6 +59,8 @@ body {
   margin-right: 3%;
 }
 
+/*.col2 {width: 100%;}*/
+
 #primary-display {
   width: 728px;
   height: 432px;
@@ -67,7 +69,6 @@ body {
 
 #primary-details {
   display: inline-block;
-  background-color: blue;
   width: 296px;
   height: 432px;
 }
@@ -77,8 +78,57 @@ body {
   margin-left: 40px;
 }
 
-#primary-details-content > h4 {
-  font: bold 18px Arial;
-/*  font-size: 18px;
-  font-weight: bold;*/
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 0px;
+  margin-bottom: 32px; /* specs asked for 32px */
+}
+
+.stat-label1 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  color: grey;
+}
+
+.stat-figure1 {
+  font-size: 16px;
+  font-weight: 900;
+  margin-top: 0px;
+  margin-bottom: 10px; /* specs asked for 16px */
+}
+
+#share-container {
+  margin-top: 24px;
+  width: 120px;
+}
+
+.share-label1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.mail-icon {
+  float: right;
+}
+
+#page-stats-container {
+  margin-top: 32px;
+}
+
+.page-stat {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.stat-figure2 {
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: green;
 }
