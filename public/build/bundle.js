@@ -21848,7 +21848,42 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col3' },
-	          'sss'
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'secondary-display-container' },
+	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car1.png" })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'secondary-display-container' },
+	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car2.png" })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'secondary-display-container' },
+	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car3.png" })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'secondary-display-container' },
+	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car4.png" })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'secondary-display-container' },
+	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car5.png" })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'secondary-display-container' },
+	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car6.png" })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col4' },
+	          _react2.default.createElement('div', { id: 'exterior-details' }),
+	          _react2.default.createElement('div', { id: 'performance-details' })
 	        )
 	      );
 	    }
@@ -21856,6 +21891,26 @@
 	
 	  return Car;
 	}(_react.Component);
+	
+	// <div className="secondary-display-container">
+	//   <img className="secondary-display" src={"../images/car1.png"} />
+	// </div>
+	// <div className="secondary-display-container">
+	//   <img className="secondary-display" src={"../images/car2.png"} />
+	// </div>
+	// <div className="secondary-display-container">
+	//   <img className="secondary-display" src={"../images/car3.png"} />
+	// </div>
+	// <div className="secondary-display-container">
+	//   <img className="secondary-display" src={"../images/car4.png"} />
+	// </div>
+	// <div className="secondary-display-container">
+	//   <img className="secondary-display" src={"../images/car5.png"} />
+	// </div>
+	// <div className="secondary-display-container">
+	//   <img className="secondary-display" src={"../images/car6.png"} />
+	// </div>
+	
 	
 	exports.default = Car;
 
