@@ -60,9 +60,9 @@
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
-	var _Car = __webpack_require__(174);
+	var _CarDetails = __webpack_require__(176);
 	
-	var _Car2 = _interopRequireDefault(_Car);
+	var _CarDetails2 = _interopRequireDefault(_CarDetails);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -87,8 +87,8 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_Header2.default, { testProp: 'HEADAAAAAAA' }),
-	        _react2.default.createElement(_Car2.default, { testProp: 'CAAAAAAAAA' })
+	        _react2.default.createElement(_Header2.default, null),
+	        _react2.default.createElement(_CarDetails2.default, null)
 	      );
 	    }
 	  }]);
@@ -21681,7 +21681,9 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 174 */
+/* 174 */,
+/* 175 */,
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21704,6 +21706,10 @@
 	
 	var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 	
+	var _SpecificDetails = __webpack_require__(179);
+	
+	var _SpecificDetails2 = _interopRequireDefault(_SpecificDetails);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21712,134 +21718,144 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Car = function (_Component) {
-	  _inherits(Car, _Component);
+	// import MainDetails from './MainDetails';
+	// import ImagesRow from './ImagesRow';
 	
-	  function Car() {
-	    _classCallCheck(this, Car);
 	
-	    return _possibleConstructorReturn(this, (Car.__proto__ || Object.getPrototypeOf(Car)).apply(this, arguments));
+	var CarDetails = function (_Component) {
+	  _inherits(CarDetails, _Component);
+	
+	  function CarDetails(props) {
+	    _classCallCheck(this, CarDetails);
+	
+	    var _this = _possibleConstructorReturn(this, (CarDetails.__proto__ || Object.getPrototypeOf(CarDetails)).call(this, props));
+	
+	    _this.state = {
+	      imageNumber: 1
+	    };
+	    return _this;
 	  }
 	
-	  _createClass(Car, [{
+	  _createClass(CarDetails, [{
+	    key: 'onHandleClick',
+	    value: function onHandleClick(num) {
+	      this.setState({ imageNumber: num });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
+	        _react2.default.createElement('img', { id: 'primary-display', src: "../images/car" + this.state.imageNumber + ".png" }),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'col2' },
-	          _react2.default.createElement('img', { id: 'primary-display', src: "../images/car1.png" }),
+	          { id: 'primary-details' },
 	          _react2.default.createElement(
 	            'div',
-	            { id: 'primary-details' },
+	            { id: 'primary-details-content' },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              ' Ford Spectacular '
+	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { id: 'primary-details-content' },
-	              _react2.default.createElement(
-	                'h1',
-	                null,
-	                ' Ford Spectacular '
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'stat-label1' },
-	                ' Year '
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'stat-figure1' },
-	                ' 3012 '
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'stat-label1' },
-	                ' Price Range '
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'stat-figure1' },
-	                ' $100,000 - $120,000 '
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'stat-label1' },
-	                ' Mileage '
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'stat-figure1' },
-	                ' 600,000 miles '
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'stat-label1' },
-	                ' Item Number : AV8AS7 '
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'stat-label1' },
-	                ' VIN : EV11JV10AV8AS7MI4 '
-	              ),
+	              { className: 'stat-label1' },
+	              ' Year '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'stat-figure1' },
+	              ' 3012 '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'stat-label1' },
+	              ' Price Range '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'stat-figure1' },
+	              ' $100,000 - $120,000 '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'stat-label1' },
+	              ' Mileage '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'stat-figure1' },
+	              ' 600,000 miles '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'stat-label1' },
+	              ' Item Number : AV8AS7 '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'stat-label1' },
+	              ' VIN : EV11JV10AV8AS7MI4 '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { id: 'share-container' },
 	              _react2.default.createElement(
 	                'div',
-	                { id: 'share-container' },
+	                { className: 'share-label1' },
+	                ' Share this car '
+	              ),
+	              _react2.default.createElement(_reactFontawesome2.default, {
+	                className: 'mail-icon',
+	                name: 'envelope',
+	                size: 'custom'
+	              })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { id: 'page-stats-container' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'page-stat' },
 	                _react2.default.createElement(
 	                  'div',
-	                  { className: 'share-label1' },
-	                  ' Share this car '
-	                ),
-	                _react2.default.createElement(_reactFontawesome2.default, {
-	                  className: 'mail-icon',
-	                  name: 'envelope',
-	                  size: 'custom'
-	                })
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { id: 'page-stats-container' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'page-stat' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'stat-label1' },
-	                    'Views'
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'stat-figure2' },
-	                    '123'
-	                  )
+	                  { className: 'stat-label1' },
+	                  'Views'
 	                ),
 	                _react2.default.createElement(
 	                  'div',
-	                  { className: 'page-stat' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'stat-label1' },
-	                    'Saves'
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'stat-figure2' },
-	                    '45'
-	                  )
+	                  { className: 'stat-figure2' },
+	                  '123'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'page-stat' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'stat-label1' },
+	                  'Saves'
 	                ),
 	                _react2.default.createElement(
 	                  'div',
-	                  { className: 'page-stat' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'stat-label1' },
-	                    'Shares'
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'stat-figure2' },
-	                    '49'
-	                  )
+	                  { className: 'stat-figure2' },
+	                  '45'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'page-stat' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'stat-label1' },
+	                  'Shares'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'stat-figure2' },
+	                  '49'
 	                )
 	              )
 	            )
@@ -21847,72 +21863,235 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'col3' },
+	          { id: 'section2' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'secondary-display-container' },
-	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car1.png" })
+	            null,
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 1) },
+	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car1.png" })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 2) },
+	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car2.png" })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 3) },
+	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car3.png" })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 4) },
+	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car4.png" })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 5) },
+	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car5.png" })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 6) },
+	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car6.png" })
+	            )
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'secondary-display-container' },
-	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car2.png" })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'secondary-display-container' },
-	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car3.png" })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'secondary-display-container' },
-	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car4.png" })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'secondary-display-container' },
-	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car5.png" })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'secondary-display-container' },
-	            _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car6.png" })
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col4' },
-	          _react2.default.createElement('div', { id: 'exterior-details' }),
-	          _react2.default.createElement('div', { id: 'performance-details' })
+	          _react2.default.createElement(_SpecificDetails2.default, null)
 	        )
 	      );
 	    }
 	  }]);
 	
-	  return Car;
+	  return CarDetails;
 	}(_react.Component);
 	
-	// <div className="secondary-display-container">
-	//   <img className="secondary-display" src={"../images/car1.png"} />
-	// </div>
-	// <div className="secondary-display-container">
-	//   <img className="secondary-display" src={"../images/car2.png"} />
-	// </div>
-	// <div className="secondary-display-container">
-	//   <img className="secondary-display" src={"../images/car3.png"} />
-	// </div>
-	// <div className="secondary-display-container">
-	//   <img className="secondary-display" src={"../images/car4.png"} />
-	// </div>
-	// <div className="secondary-display-container">
-	//   <img className="secondary-display" src={"../images/car5.png"} />
-	// </div>
-	// <div className="secondary-display-container">
-	//   <img className="secondary-display" src={"../images/car6.png"} />
-	// </div>
+	exports.default = CarDetails;
+
+/***/ },
+/* 177 */,
+/* 178 */,
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	
-	exports.default = Car;
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(34);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SpecificDetails = function (_Component) {
+	  _inherits(SpecificDetails, _Component);
+	
+	  function SpecificDetails() {
+	    _classCallCheck(this, SpecificDetails);
+	
+	    return _possibleConstructorReturn(this, (SpecificDetails.__proto__ || Object.getPrototypeOf(SpecificDetails)).apply(this, arguments));
+	  }
+	
+	  _createClass(SpecificDetails, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'specific-details-container' },
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'exterior-details' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'specific-details-title' },
+	            'EXTERIOR'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'specific-details-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-label' },
+	              'Color'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-stat' },
+	              'Rusty Charcoal'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'specific-details-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-label' },
+	              'Seats'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-stat' },
+	              'Premium Leather'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'specific-details-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-label' },
+	              'Wheals'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-stat' },
+	              'Pirelli'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'specific-details-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-label' },
+	              'Title'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-stat' },
+	              'Clean'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'performance-details' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'specific-details-title' },
+	            'PERFORMANCE'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'specific-details-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-label' },
+	              'Cylinders'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-stat' },
+	              'V12'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'specific-details-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-label' },
+	              'City MPG'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-stat' },
+	              '100 MPG'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'specific-details-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-label' },
+	              'Highway MPG'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-stat' },
+	              '200 MPG'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'specific-details-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-label' },
+	              'Engine'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'specific-stat' },
+	              '2.6'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return SpecificDetails;
+	}(_react.Component);
+	
+	exports.default = SpecificDetails;
 
 /***/ }
 /******/ ]);

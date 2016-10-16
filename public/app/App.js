@@ -2,15 +2,15 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from './Header';
-import Car from './Car';
+import CarDetails from './CarDetails';
 
 class App extends Component {
 
   render() {
     return (
       <div>
-        <Header testProp='HEADAAAAAAA'/>
-        <Car testProp='CAAAAAAAAA'/>
+        <Header />
+        <CarDetails />
       </div>
     )
   }
