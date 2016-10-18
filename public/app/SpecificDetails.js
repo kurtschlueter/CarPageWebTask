@@ -15,15 +15,15 @@ export default class SpecificDetails extends Component {
               Color
             </div>
             <div className="specific-stat">
-              Rusty Charcoal
+              {this.props.carInfo[1].color}
             </div>
           </div>
           <div className="specific-details-row">
             <div className="specific-label">
-              Seats
+              Doors
             </div>
             <div className="specific-stat">
-              Premium Leather
+              {this.props.carInfo[1].doors}
             </div>
           </div>
           <div className="specific-details-row">
@@ -31,15 +31,15 @@ export default class SpecificDetails extends Component {
               Wheals
             </div>
             <div className="specific-stat">
-              Pirelli
+              {this.props.carInfo[1].wheels}
             </div>
           </div>
           <div className="specific-details-row">
             <div className="specific-label">
-              Title
+              Condition
             </div>
             <div className="specific-stat">
-              Clean
+              {this.props.carInfo[1].condition}
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default class SpecificDetails extends Component {
               Cylinders
             </div>
             <div className="specific-stat">
-              V12
+              {this.props.carInfo[1].cylinders}
             </div>
           </div>
           <div className="specific-details-row">
@@ -60,7 +60,7 @@ export default class SpecificDetails extends Component {
               City MPG
             </div>
             <div className="specific-stat">
-              100 MPG
+              {this.props.carInfo[1].city_mpg + " MPG"}
             </div>
           </div>
           <div className="specific-details-row">
@@ -68,7 +68,7 @@ export default class SpecificDetails extends Component {
               Highway MPG
             </div>
             <div className="specific-stat">
-              200 MPG
+              {this.props.carInfo[1].highway_mpg + " MPG"}
             </div>
           </div>
           <div className="specific-details-row">
@@ -76,7 +76,7 @@ export default class SpecificDetails extends Component {
               Engine
             </div>
             <div className="specific-stat">
-              2.6
+              {this.props.carInfo[1].engine}
             </div>
           </div>
         </div>

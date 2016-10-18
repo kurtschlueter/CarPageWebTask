@@ -7,6 +7,7 @@ import CarDetails from './CarDetails';
 import Firebase from 'firebase';
 
 
+
 class App extends Component {
 
   constructor(props) {
@@ -27,12 +28,9 @@ class App extends Component {
   }
 
   holdInititalState() {
-
     if (Object.keys(this.state.carInfo).length === 0) {
-      console.log('yes')
       return(null)
     } else {
-      console.log('no')
       return(<CarDetails carInfo={this.state.carInfo}/>)
     }
   }

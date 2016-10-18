@@ -105,12 +105,9 @@
 	  }, {
 	    key: 'holdInititalState',
 	    value: function holdInititalState() {
-	
 	      if (Object.keys(this.state.carInfo).length === 0) {
-	        console.log('yes');
 	        return null;
 	      } else {
-	        console.log('no');
 	        return _react2.default.createElement(_CarDetails2.default, { carInfo: this.state.carInfo });
 	      }
 	    }
@@ -21771,15 +21768,8 @@
 	  }
 	
 	  _createClass(CarDetails, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      console.log(this.props.carInfo);
-	    }
-	  }, {
 	    key: 'onHandleClick',
 	    value: function onHandleClick(num) {
-	      console.log(this.props.carInfo);
-	      // debugger
 	      this.setState({ imageNumber: num });
 	    }
 	  }, {
@@ -21798,7 +21788,9 @@
 	            _react2.default.createElement(
 	              'h1',
 	              null,
-	              ' Ford Spectacular '
+	              ' ',
+	              this.props.carInfo[1].name,
+	              ' '
 	            ),
 	            _react2.default.createElement(
 	              'div',
@@ -21808,7 +21800,9 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'stat-figure1' },
-	              ' 3012 '
+	              ' ',
+	              this.props.carInfo[1].year,
+	              ' '
 	            ),
 	            _react2.default.createElement(
 	              'div',
@@ -21818,7 +21812,9 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'stat-figure1' },
-	              ' $100,000 - $120,000 '
+	              ' ',
+	              "$" + this.props.carInfo[1].price_min.toLocaleString() + " - $" + this.props.carInfo[1].price_max.toLocaleString(),
+	              ' '
 	            ),
 	            _react2.default.createElement(
 	              'div',
@@ -21828,17 +21824,23 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'stat-figure1' },
-	              ' 600,000 miles '
+	              ' ',
+	              this.props.carInfo[1].mileage.toLocaleString() + " miles",
+	              ' '
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'stat-label1' },
-	              ' Item Number : AV8AS7 '
+	              ' ',
+	              "Item Number : " + this.props.carInfo[1].item_number,
+	              ' '
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'stat-label1' },
-	              ' VIN : EV11JV10AV8AS7MI4 '
+	              ' ',
+	              "VIN : " + this.props.carInfo[1].vin_number,
+	              ' '
 	            ),
 	            _react2.default.createElement(
 	              'div',
@@ -21868,7 +21870,7 @@
 	                _react2.default.createElement(
 	                  'div',
 	                  { className: 'stat-figure2' },
-	                  '123'
+	                  this.props.carInfo[1].page_views
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -21882,7 +21884,7 @@
 	                _react2.default.createElement(
 	                  'div',
 	                  { className: 'stat-figure2' },
-	                  '45'
+	                  this.props.carInfo[1].saves
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -21896,7 +21898,7 @@
 	                _react2.default.createElement(
 	                  'div',
 	                  { className: 'stat-figure2' },
-	                  '49'
+	                  this.props.carInfo[1].shares
 	                )
 	              )
 	            )
@@ -21911,35 +21913,35 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 1) },
-	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car1.png" })
+	              _react2.default.createElement('img', { className: 'secondary-display', src: this.props.carInfo[1].image_url1 })
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 2) },
-	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car2.png" })
+	              _react2.default.createElement('img', { className: 'secondary-display', src: this.props.carInfo[1].image_url2 })
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 3) },
-	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car3.png" })
+	              _react2.default.createElement('img', { className: 'secondary-display', src: this.props.carInfo[1].image_url3 })
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 4) },
-	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car4.png" })
+	              _react2.default.createElement('img', { className: 'secondary-display', src: this.props.carInfo[1].image_url4 })
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 5) },
-	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car5.png" })
+	              _react2.default.createElement('img', { className: 'secondary-display', src: this.props.carInfo[1].image_url5 })
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'secondary-display-container', onClick: this.onHandleClick.bind(this, 6) },
-	              _react2.default.createElement('img', { className: 'secondary-display', src: "../images/car6.png" })
+	              _react2.default.createElement('img', { className: 'secondary-display', src: this.props.carInfo[1].image_url6 })
 	            )
 	          ),
-	          _react2.default.createElement(_SpecificDetails2.default, null)
+	          _react2.default.createElement(_SpecificDetails2.default, { carInfo: this.props.carInfo })
 	        )
 	      );
 	    }
@@ -22012,7 +22014,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'specific-stat' },
-	              'Rusty Charcoal'
+	              this.props.carInfo[1].color
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -22021,12 +22023,12 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'specific-label' },
-	              'Seats'
+	              'Doors'
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'specific-stat' },
-	              'Premium Leather'
+	              this.props.carInfo[1].doors
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -22040,7 +22042,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'specific-stat' },
-	              'Pirelli'
+	              this.props.carInfo[1].wheels
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -22049,12 +22051,12 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'specific-label' },
-	              'Title'
+	              'Condition'
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'specific-stat' },
-	              'Clean'
+	              this.props.carInfo[1].condition
 	            )
 	          )
 	        ),
@@ -22077,7 +22079,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'specific-stat' },
-	              'V12'
+	              this.props.carInfo[1].cylinders
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -22091,7 +22093,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'specific-stat' },
-	              '100 MPG'
+	              this.props.carInfo[1].city_mpg + " MPG"
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -22105,7 +22107,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'specific-stat' },
-	              '200 MPG'
+	              this.props.carInfo[1].highway_mpg + " MPG"
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -22119,7 +22121,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'specific-stat' },
-	              '2.6'
+	              this.props.carInfo[1].engine
 	            )
 	          )
 	        )
