@@ -7,21 +7,21 @@ export default class Header extends Component {
     return (
       <div id="header">
         <div id="header-right">
-          <div id="right-header-icon-container">
+          <div className="right-header-icon-container">
             <FontAwesome
               className='header-icon'
               name='map-marker'
               size='custom'
             />
           </div>
-          <div id="right-header-icon-container">
+          <div className="right-header-icon-container">
             <FontAwesome
               className='header-icon'
               name='phone'
               size='custom'
             />
           </div>
-          <div id="right-header-icon-container">
+          <div className="right-header-icon-container" id="clock-icon-div">
             <FontAwesome
               className='header-icon'
               name='clock-o'

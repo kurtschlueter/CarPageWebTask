@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 // import MainDetails from './MainDetails';
-// import ImagesRow from './ImagesRow';
+import ImageScrollMobile from './ImageScrollMobile';
 import FontAwesome from 'react-fontawesome';
 import SpecificDetails from './SpecificDetails';
 
@@ -23,6 +23,9 @@ export default class CarDetails extends Component {
     return (
       <div>
         <img id="primary-display" src={"../images/car" + this.state.imageNumber + ".png"} />
+        <div id="image-scroll-holder">
+          <ImageScrollMobile carInfo={this.props.carInfo}/>
+        </div>
         <div id="primary-details">
           <div id="primary-details-content">
             <h1> {this.props.carInfo[1].name} </h1>
@@ -59,7 +62,7 @@ export default class CarDetails extends Component {
           </div>
         </div>
         <div id="section2">
-          <div>
+          <div id="image-row">
             <div className="secondary-display-container" onClick={this.onHandleClick.bind(this, 1)}>
               <img className="secondary-display" src={this.props.carInfo[1].image_url1} />
             </div>

@@ -1,12 +1,21 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-// import Dotenv from 'dotenv';
 
 import Header from './Header';
 import CarDetails from './CarDetails';
 import Firebase from 'firebase';
 
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyClVpRY-c0pezTV-vyC6cnlG6f6bXU8lpM",
+  authDomain: "carpagewebtask.firebaseapp.com",
+  databaseURL: "https://carpagewebtask.firebaseio.com",
+  storageBucket: "",
+  messagingSenderId: "131105351129"
+};
 
+Firebase.initializeApp(config);
+Firebase.auth().signInWithEmailAndPassword("user@user.com", "password")
 
 class App extends Component {
 

@@ -1,0 +1,57 @@
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    body {
+      width: 100%;
+      margin: 0;
+    }
+    #clock-icon-div {
+      display: none;
+    }
+    .right-header-icon-container:nth-child(n+2) {
+      border-right: none;
+    }
+    #left-header-icon-container {
+      display: none;
+    }
+    .right-header-icon-container {
+      width: 49%;
+    }
+
+    #primary-display {
+      display: none;
+    }
+
+    #image-row {
+      display: none;
+    }
+
+    #image-scroll-holder {
+      display: inline-block;
+    }
+
+
+    #primary-details {
+      width: 100%;
+    }
+    #specific-details-container {
+      margin-top: 16px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    #exterior-details {
+      width: 100%;
+      margin-right:0px;
+    }
+
+    #performance-details {
+      width: 100%;
+      margin-right:0px;
+    }
+}

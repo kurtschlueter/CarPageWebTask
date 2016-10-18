@@ -26,3 +26,6 @@ npm install babel-preset-react
 need to create web pack.config.js file to give web pack instructions for all of the transpiling
 
 npm install --save react-fontawesome
+
+I installed firebase for the db. Becuase we are only dealing with one entry, I figured that I would keep it simple. If this project was to be scaled and fully functional, I might have to reconsider.
+
