@@ -24,5 +24,8 @@ module.exports = {
         presets: ['es2015', 'react']
       }
     }]
+  },
+  node: {
+    fs: "empty"
   }
 }

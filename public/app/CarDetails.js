@@ -11,11 +11,16 @@ export default class CarDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      imageNumber: 1
+      imageNumber: 1,
     };
   }
 
+  componentDidMount(){
+    console.log(this.props.carInfo)
+  }
   onHandleClick(num) {
+    console.log(this.props.carInfo)
+    // debugger
     this.setState({imageNumber: num})
   }
 
