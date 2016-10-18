@@ -27,14 +27,17 @@ export default class CarDetails extends Component {
           <ImageScrollMobile carInfo={this.props.carInfo}/>
         </div>
         <div id="primary-details">
-          <div id="primary-details-content">
-            <h1> {this.props.carInfo[1].name} </h1>
+          <h1> {this.props.carInfo[1].name} </h1>
+          <div id="primary-details-content-1">
+
             <div className='stat-label1'> Year </div>
             <div className='stat-figure1'> {this.props.carInfo[1].year} </div>
             <div className='stat-label1'> Price Range </div>
             <div className='stat-figure1'> {"$" + this.props.carInfo[1].price_min.toLocaleString() + " - $" + this.props.carInfo[1].price_max.toLocaleString()} </div>
             <div className='stat-label1'> Mileage </div>
             <div className='stat-figure1'> {this.props.carInfo[1].mileage.toLocaleString() + " miles"} </div>
+          </div>
+          <div id="primary-details-content-2">
             <div className='stat-label1'> {"Item Number : " + this.props.carInfo[1].item_number} </div>
             <div className='stat-label1'> {"VIN : " + this.props.carInfo[1].vin_number} </div>
             <div id="share-container">
@@ -62,6 +65,9 @@ export default class CarDetails extends Component {
           </div>
         </div>
         <div id="section2">
+          <div id="mobile-call-div">
+            CALL US
+          </div>
           <div id="image-row">
             <div className="secondary-display-container" onClick={this.onHandleClick.bind(this, 1)}>
               <img className="secondary-display" src={this.props.carInfo[1].image_url1} />

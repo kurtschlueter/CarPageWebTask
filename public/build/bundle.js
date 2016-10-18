@@ -60,6 +60,10 @@
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
+	var _Footer = __webpack_require__(217);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
 	var _CarDetails = __webpack_require__(176);
 	
 	var _CarDetails2 = _interopRequireDefault(_CarDetails);
@@ -130,7 +134,8 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(_Header2.default, null),
-	        this.holdInititalState()
+	        this.holdInititalState(),
+	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
 	  }]);
@@ -21802,15 +21807,15 @@
 	          'div',
 	          { id: 'primary-details' },
 	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            ' ',
+	            this.props.carInfo[1].name,
+	            ' '
+	          ),
+	          _react2.default.createElement(
 	            'div',
-	            { id: 'primary-details-content' },
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              ' ',
-	              this.props.carInfo[1].name,
-	              ' '
-	            ),
+	            { id: 'primary-details-content-1' },
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'stat-label1' },
@@ -21846,7 +21851,11 @@
 	              ' ',
 	              this.props.carInfo[1].mileage.toLocaleString() + " miles",
 	              ' '
-	            ),
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'primary-details-content-2' },
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'stat-label1' },
@@ -21926,6 +21935,11 @@
 	        _react2.default.createElement(
 	          'div',
 	          { id: 'section2' },
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'mobile-call-div' },
+	            'CALL US'
+	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { id: 'image-row' },
@@ -22895,33 +22909,21 @@
 	var ImageScrollMobile = function (_Component) {
 	  _inherits(ImageScrollMobile, _Component);
 	
-	  function ImageScrollMobile(props) {
+	  function ImageScrollMobile() {
 	    _classCallCheck(this, ImageScrollMobile);
 	
-	    var _this = _possibleConstructorReturn(this, (ImageScrollMobile.__proto__ || Object.getPrototypeOf(ImageScrollMobile)).call(this, props));
-	
-	    _this.state = {
-	      slideIndex: 0
-	    };
-	    return _this;
+	    return _possibleConstructorReturn(this, (ImageScrollMobile.__proto__ || Object.getPrototypeOf(ImageScrollMobile)).apply(this, arguments));
 	  }
 	
 	  _createClass(ImageScrollMobile, [{
 	    key: 'render',
 	    value: function render() {
-	      var _this2 = this;
-	
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(
 	          _nukaCarousel2.default,
-	          {
-	            ref: 'carousel',
-	            slideIndex: this.state.slideIndex,
-	            afterSlide: function afterSlide(newSlideIndex) {
-	              return _this2.setState({ slideIndex: newSlideIndex });
-	            } },
+	          null,
 	          _react2.default.createElement('img', { src: "../images/car1.png", onLoad: function onLoad() {
 	              window.dispatchEvent(new Event('resize'));
 	            } }),
@@ -24843,6 +24845,117 @@
 	
 	}());
 
+
+/***/ },
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(34);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Footer = function (_Component) {
+	  _inherits(Footer, _Component);
+	
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+	
+	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+	  }
+	
+	  _createClass(Footer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'footer' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'footer-link-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'footer-link' },
+	            'About Us'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'footer-link-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'footer-link' },
+	            'Terms'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'footer-link-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'footer-link' },
+	            'Privacy Policy'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'PLS is a registered service mark and other marks are service marks of PLS Financial Services, INC.  \xA9 2016'
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Footer;
+	}(_react.Component);
+	
+	exports.default = Footer;
 
 /***/ }
 /******/ ]);
