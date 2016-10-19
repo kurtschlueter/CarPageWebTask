@@ -145,7 +145,7 @@
 	
 	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
 	
-	// Its important tonote that this React code will get injected into the dom element where id='app'. But this is not the code that gets run directly. It still has to be transpiled into raw javascript from this JSX.
+	// Its important to note that this React code will get injected into the dom element where id='app'. But this is not the code that gets run directly. It still has to be transpiled into raw javascript from this JSX.
 
 /***/ },
 /* 1 */
