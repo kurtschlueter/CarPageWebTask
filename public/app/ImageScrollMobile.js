@@ -6,7 +6,7 @@ export default class ImageScrollMobile extends Component {
 
   render() {
     return (
-      <div>
+      <div id="image-scroll-holder">
         <Carousel>
           <img src={"../images/car1.png"} onLoad={() => {window.dispatchEvent(new Event('resize'));}}/>
           <img src={"../images/car2.png"} onLoad={() => {window.dispatchEvent(new Event('resize'));}}/>

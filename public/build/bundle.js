@@ -21839,6 +21839,10 @@
 	
 	var _ImagesRow2 = _interopRequireDefault(_ImagesRow);
 	
+	var _ImageScrollMobile = __webpack_require__(176);
+	
+	var _ImageScrollMobile2 = _interopRequireDefault(_ImageScrollMobile);
+	
 	var _reactFontawesome = __webpack_require__(173);
 	
 	var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
@@ -21880,6 +21884,8 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
+	        _react2.default.createElement('img', { id: 'primary-display', src: "../images/car" + this.state.imageNumber + ".png" }),
+	        _react2.default.createElement(_ImageScrollMobile2.default, { carInfo: this.props.carInfo }),
 	        _react2.default.createElement(_MainDetails2.default, {
 	          imageNumber: this.state.imageNumber,
 	          carInfo: this.props.carInfo
@@ -21955,7 +21961,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { id: 'image-scroll-holder' },
 	        _react2.default.createElement(
 	          _nukaCarousel2.default,
 	          null,
@@ -24794,10 +24800,6 @@
 	
 	var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 	
-	var _ImageScrollMobile = __webpack_require__(176);
-	
-	var _ImageScrollMobile2 = _interopRequireDefault(_ImageScrollMobile);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24820,138 +24822,128 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        _react2.default.createElement('img', { id: 'primary-display', src: "../images/car" + this.props.imageNumber + ".png" }),
+	        { id: 'primary-details' },
 	        _react2.default.createElement(
-	          'div',
-	          { id: 'image-scroll-holder' },
-	          _react2.default.createElement(_ImageScrollMobile2.default, { carInfo: this.props.carInfo })
+	          'h1',
+	          null,
+	          ' ',
+	          this.props.carInfo[1].name,
+	          ' '
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'primary-details' },
+	          { id: 'primary-details-content-1' },
 	          _react2.default.createElement(
-	            'h1',
-	            null,
+	            'div',
+	            { className: 'stat-label1' },
+	            ' Year '
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'stat-figure1' },
 	            ' ',
-	            this.props.carInfo[1].name,
+	            this.props.carInfo[1].year,
 	            ' '
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { id: 'primary-details-content-1' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'stat-label1' },
-	              ' Year '
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'stat-figure1' },
-	              ' ',
-	              this.props.carInfo[1].year,
-	              ' '
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'stat-label1' },
-	              ' Price Range '
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'stat-figure1' },
-	              ' ',
-	              "$" + this.props.carInfo[1].price_min.toLocaleString() + " - $" + this.props.carInfo[1].price_max.toLocaleString(),
-	              ' '
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'stat-label1' },
-	              ' Mileage '
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'stat-figure1' },
-	              ' ',
-	              this.props.carInfo[1].mileage.toLocaleString() + " miles",
-	              ' '
-	            )
+	            { className: 'stat-label1' },
+	            ' Price Range '
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { id: 'primary-details-content-2' },
+	            { className: 'stat-figure1' },
+	            ' ',
+	            "$" + this.props.carInfo[1].price_min.toLocaleString() + " - $" + this.props.carInfo[1].price_max.toLocaleString(),
+	            ' '
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'stat-label1' },
+	            ' Mileage '
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'stat-figure1' },
+	            ' ',
+	            this.props.carInfo[1].mileage.toLocaleString() + " miles",
+	            ' '
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'primary-details-content-2' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'stat-label1' },
+	            ' ',
+	            "Item Number : " + this.props.carInfo[1].item_number,
+	            ' '
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'stat-label1' },
+	            ' ',
+	            "VIN : " + this.props.carInfo[1].vin_number,
+	            ' '
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'share-container' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'stat-label1' },
-	              ' ',
-	              "Item Number : " + this.props.carInfo[1].item_number,
-	              ' '
+	              { className: 'share-label1' },
+	              ' Share this car '
+	            ),
+	            _react2.default.createElement(_reactFontawesome2.default, {
+	              className: 'mail-icon',
+	              name: 'envelope',
+	              size: 'custom'
+	            })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'page-stats-container' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'page-stat' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-label1' },
+	                'Views'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-figure2' },
+	                this.props.carInfo[1].page_views
+	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'stat-label1' },
-	              ' ',
-	              "VIN : " + this.props.carInfo[1].vin_number,
-	              ' '
+	              { className: 'page-stat' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-label1' },
+	                'Saves'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'stat-figure2' },
+	                this.props.carInfo[1].saves
+	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { id: 'share-container' },
+	              { className: 'page-stat' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'share-label1' },
-	                ' Share this car '
-	              ),
-	              _react2.default.createElement(_reactFontawesome2.default, {
-	                className: 'mail-icon',
-	                name: 'envelope',
-	                size: 'custom'
-	              })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { id: 'page-stats-container' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'page-stat' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'stat-label1' },
-	                  'Views'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'stat-figure2' },
-	                  this.props.carInfo[1].page_views
-	                )
+	                { className: 'stat-label1' },
+	                'Shares'
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'page-stat' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'stat-label1' },
-	                  'Saves'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'stat-figure2' },
-	                  this.props.carInfo[1].saves
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'page-stat' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'stat-label1' },
-	                  'Shares'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'stat-figure2' },
-	                  this.props.carInfo[1].shares
-	                )
+	                { className: 'stat-figure2' },
+	                this.props.carInfo[1].shares
 	              )
 	            )
 	          )

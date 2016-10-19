@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import MainDetails from './MainDetails';
 import ImagesRow from './ImagesRow';
+import ImageScrollMobile from './ImageScrollMobile';
 import FontAwesome from 'react-fontawesome';
 import SpecificDetails from './SpecificDetails';
 
@@ -22,6 +23,8 @@ export default class CarDetails extends Component {
   render() {
     return (
       <div>
+        <img id="primary-display" src={"../images/car" + this.state.imageNumber + ".png"} />
+        <ImageScrollMobile carInfo={this.props.carInfo}/>
         <MainDetails
           imageNumber={ this.state.imageNumber }
           carInfo={ this.props.carInfo}
