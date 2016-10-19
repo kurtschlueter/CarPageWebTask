@@ -5,24 +5,24 @@ export default class ImagesRow extends Component {
 
   render() {
     return (
-      <div>
-        <div className="secondary-display-container" onClick={this.props.onClick(1)}>
-          <img className="secondary-display" src={"../images/car1.png"} />
+      <div id="image-row">
+        <div className="secondary-display-container" onClick={this.props.changeProfileImage.bind(this, 1)}>
+          <img className="secondary-display" src={this.props.carInfo[1].image_url1} />
         </div>
-        <div className="secondary-display-container" onClick={this.props.onClick(1)}>
-          <img className="secondary-display" src={"../images/car2.png"} />
+        <div className="secondary-display-container" onClick={this.props.changeProfileImage.bind(this, 2)}>
+          <img className="secondary-display" src={this.props.carInfo[1].image_url2} />
         </div>
-        <div className="secondary-display-container" onClick={this.props.onClick(1)}>
-          <img className="secondary-display" src={"../images/car3.png"} />
+        <div className="secondary-display-container" onClick={this.props.changeProfileImage.bind(this, 3)}>
+          <img className="secondary-display" src={this.props.carInfo[1].image_url3} />
         </div>
-        <div className="secondary-display-container" onClick={this.props.onClick(1)}>
-          <img className="secondary-display" src={"../images/car4.png"} />
+        <div className="secondary-display-container" onClick={this.props.changeProfileImage.bind(this, 4)}>
+          <img className="secondary-display" src={this.props.carInfo[1].image_url4} />
         </div>
-        <div className="secondary-display-container" onClick={this.props.onClick(1)}>
-          <img className="secondary-display" src={"../images/car5.png"} />
+        <div className="secondary-display-container" onClick={this.props.changeProfileImage.bind(this, 5)}>
+          <img className="secondary-display" src={this.props.carInfo[1].image_url5} />
         </div>
-        <div className="secondary-display-container" onClick={this.props.onClick(1)}>
-          <img className="secondary-display" src={"../images/car6.png"} />
+        <div className="secondary-display-container" onClick={this.props.changeProfileImage.bind(this, 6)}>
+          <img className="secondary-display" src={this.props.carInfo[1].image_url6} />
         </div>
       </div>
     );
